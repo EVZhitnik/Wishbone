@@ -1,0 +1,40 @@
+@use 'helpers' as *;
+
+.illustration-architecture {
+    &__body {
+        position: relative;
+        height: rem(600);
+
+        @include mobile {
+            height: rem(300);
+        }
+    }
+
+    &__image {
+        @include abs-center;
+        @include square(100%);
+
+        object-fit: cover;
+
+        @include tablet {
+            opacity: 0.4;
+        }
+    }
+
+    &__text {
+        @include abs-y;
+
+        right: rem(75);
+        z-index: 90;
+        max-width: rem(285);
+        padding-left: 1rem;
+    }
+
+    &__title {
+        font-size: rem(14);
+        line-height: 1.43;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--color-dark-gray);
+    }
+}
