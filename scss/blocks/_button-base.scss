@@ -1,0 +1,16 @@
+@use 'helpers' as *;
+
+.button-base {
+    font-size: rem(16);
+    letter-spacing: 0.03em;
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    text-wrap: nowrap;
+    padding: rem(11) rem(20);
+    border-radius: rem(14);
+
+    @include hover {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+    }
+}
