@@ -1,0 +1,99 @@
+@use 'helpers' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-light);
+    animation-name: scrolling-header;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(50) rem(100);
+    padding-block: rem(22);
+
+    @include mobile {
+        padding-block: rem(10);
+    }
+
+    @keyframes scrolling-header {
+        to {
+            box-shadow: 0 0 1rem 0 var(--color-dark);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(20);
+    }
+
+    &__logo {
+        align-self: center;
+        cursor: pointer;
+
+        svg {
+            path {
+                fill: var(--color-dark);
+            }
+        }
+
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        column-gap: rem(30);
+
+        @include laptop {
+            column-gap: rem(20);
+        }
+
+        @include mobile {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 2rem;
+            padding: 1rem;
+            background-color: var(--color-light-gray);
+            transition-duration: var(--transition-duration);
+
+            &:not(.is-active) {
+                @include hide;
+
+                translate: 100%;
+            }
+        }
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            column-gap: rem(32);
+
+            @include laptop {
+                column-gap: rem(16); 
+            }
+
+            @include mobile {
+                flex-direction: column;
+                text-align: center;
+                row-gap: rem(10);
+            }
+        }
+
+        &-link {
+            font-size: rem(15);
+            line-height: 1.6;
+            color: var(--color-dark);
+        }
+    }
+}
