@@ -1,0 +1,8 @@
+@use 'helpers' as *;
+
+.subtitle-base {
+    font-size: rem(14);
+    line-height: 1.43;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}

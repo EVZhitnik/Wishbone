@@ -1,0 +1,81 @@
+@use 'helpers' as *;
+
+.process-clients {
+    background-color: var(--color-dark-gray);
+    color: var(--color-light-gray);
+    padding-block: rem(60);
+
+    @include mobile {
+        padding-block: rem(50);  
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(30);
+        padding-left: rem(36);
+        padding-right: rem(144);
+
+        @include tablet {
+            padding-inline: rem(16);
+        }
+
+        @include mobile {
+            display: grid;
+            justify-content: stretch;
+            row-gap: rem(30);
+        }
+    }
+
+    &__content {
+        max-width: rem(450);
+
+        @include mobile {
+            max-width: rem(500);
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        color: var(--color-light);
+
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+    }
+
+    &__description {
+        font-size: rem(15);
+    }
+
+    &__brands {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: rem(96);
+
+        @include mobile {
+            gap: rem(20);
+            justify-items: center;
+        }
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+        }
+
+        svg {
+            path {
+                fill: var(--color-light);
+
+            }
+
+            @include hover {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
+    }
+}

@@ -28,6 +28,15 @@
         z-index: 90;
         max-width: rem(285);
         padding-left: 1rem;
+
+        &--reverse {
+            right: 0;
+            left: rem(60);
+
+            @include mobile {
+                left: 0;
+            }
+        }
     }
 
     &__title {
