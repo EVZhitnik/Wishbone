@@ -1,0 +1,10 @@
+@use 'helpers' as *;
+
+.link-base {
+    letter-spacing: 0.03em;
+    color: var(--color-dark);
+
+    @include hover {
+        color: var(--color-accent);
+    }
+}

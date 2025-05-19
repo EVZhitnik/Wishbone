@@ -50,13 +50,4 @@
             margin-bottom: rem(30);
         }
     }
-
-    &__link {
-        letter-spacing: 0.03em;
-        color: var(--color-dark);
-
-        @include hover {
-            color: var(--color-accent);
-        }
-    }
 }

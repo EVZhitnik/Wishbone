@@ -1,0 +1,35 @@
+@use 'helpers' as *;
+
+.projects-card {
+    position: relative;
+
+    @include hover {
+        .projects-card__text,
+        .projects-card__link {
+            display: block;
+        }
+    }
+
+    &__image {
+        @include mobile {
+            @include square(100%);
+
+        }
+    }
+
+    &__text,
+    &__link {
+        display: none;
+        position: absolute;
+        left: rem(40);
+        padding-right: rem(14);
+    }
+
+    &__text {
+        top: rem(40);
+    }
+
+    &__link {
+        bottom: rem(40);
+    }
+}

@@ -1,0 +1,57 @@
+@use 'helpers' as *;
+
+.projects-team {
+    display: grid;
+    grid-template-columns: 32.46% auto;
+    column-gap: rem(16);
+    padding-block: rem(100);
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        row-gap: rem(30);
+        padding-block: rem(50);
+    }
+
+    &__text {
+        max-width: rem(358);
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        color: var(--color-dark-gray);
+
+        &:not(:last-child) {
+            margin-bottom: rem(14);
+        }
+    }
+
+    &__description {
+        font-size: rem(15);
+        line-height: 1.6;
+
+        &:not(:last-child) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__link {
+        padding-left: rem(25);
+
+        @include tablet {
+            padding-left: 0;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(36) rem(15);
+
+        @include mobile-s {
+            grid-template-columns: 1fr;
+        }
+    }
+}
