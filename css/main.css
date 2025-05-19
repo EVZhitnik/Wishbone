@@ -290,6 +290,13 @@ h3, .h3 {
 }
 
 h4, .h4 {
+  font-size: clamp(1.125rem, 0.96875rem + 0.641025641vw, 1.4375rem);
+  line-height: 1.3;
+  font-weight: 400;
+  color: var(--color-dark-gray);
+}
+
+h5, .h5 {
   font-size: clamp(0.875rem, 0.75rem + 0.5128205128vw, 1.125rem);
   line-height: 1.53;
   font-weight: 400;
