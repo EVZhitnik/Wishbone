@@ -45,6 +45,14 @@ h3, .h3 {
 }
 
 h4, .h4 {
+    @include fluid-text(23, 18);
+
+    line-height: 1.3;
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+h5, .h5 {
     @include fluid-text(18, 14);
 
     line-height: 1.53;

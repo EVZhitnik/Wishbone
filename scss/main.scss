@@ -10,6 +10,7 @@
 
 @use 'blocks/partners.scss';
 @use 'blocks/partners-info.scss';
+@use 'blocks/link-base.scss';
 @use 'blocks/subtitle-base.scss';
 @use 'blocks/partners-firm.scss';
 @use 'blocks/author-card.scss';
@@ -18,6 +19,12 @@
 @use 'blocks/process.scss';
 @use 'blocks/process-info.scss';
 @use 'blocks/process-clients.scss';
+
+@use 'blocks/projects.scss';
+@use 'blocks/projects-info.scss';
+@use 'blocks/projects-card.scss';
+@use 'blocks/projects-team.scss';
+@use 'blocks/projects-get-in-touch.scss';
 
 // .header,
 // main > *:not(:last-child),

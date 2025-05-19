@@ -1,0 +1,35 @@
+@use 'helpers' as *;
+
+.projects-get-in-touch {
+    background-color: var(--color-circle);
+    padding-top: rem(100);
+    padding-bottom: rem(117);
+
+    @include mobile {
+        padding-block: rem(50);
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: rem(30);
+
+        @include mobile-s {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: rem(30);
+        }
+    }
+
+    &__text {
+        max-width: rem(570);
+    }
+
+    &__question {
+        @include fluid-text(40, 25);
+
+        line-height: 1.05;
+        color: var(--color-dark);
+    }
+}
