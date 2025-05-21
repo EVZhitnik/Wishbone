@@ -1,0 +1,55 @@
+@use 'helpers' as *;
+
+.footer {
+    padding-block: rem(60);
+
+    @include mobile {
+        padding-block: rem(50);
+    }
+
+    &__inner {
+        display: grid;
+        row-gap: rem(20);
+    }
+
+    &__logo {
+        cursor: pointer;
+
+        svg {
+            path {
+                fill: var(--color-dark);
+            }
+        }
+
+        @include hover {
+            svg {
+                path {
+                    fill: var(--color-accent);
+                }
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        column-gap: rem(20);
+
+        @include mobile-s {
+            flex-direction: column;
+            align-items: stretch;
+            row-gap: rem(20);
+        }
+    }
+
+    &__copyright {
+        font-size: rem(14);
+        line-height: 1.43;
+        
+        p {
+            margin: 0;
+        }
+    }
+
+}
